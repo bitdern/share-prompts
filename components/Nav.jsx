@@ -55,7 +55,10 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <>{providers && Object.values()}</>
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => <button></button>)}
+          </>
         )}
       </div>
     </nav>
