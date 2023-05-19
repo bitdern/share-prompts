@@ -6,7 +6,23 @@ import { useRouter } from "next/navigation";
 
 import Profile from "@components/profile";
 
-const Profile = () => {
+const MyProfile = () => {
+  const { data: session } = useSession();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch(`/api/users/$
+          {session?.user.id}/posts`);
+      const data = await response.json();
+
+      setPosts(data);
+    };
+
+    console.log(posts);
+
+    fetchPosts();
+  }, []);
+
   const handleEdit = () => {};
 
   const handleDelete = async () => {};
@@ -22,4 +38,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default MyProfile;
