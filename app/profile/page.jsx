@@ -31,7 +31,7 @@ const MyProfile = () => {
     <Profile
       name="my"
       desc="Welcome to your profile page"
-      data={[]}
+      data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
