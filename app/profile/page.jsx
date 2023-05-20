@@ -9,6 +9,8 @@ import Profile from "@components/profile";
 const MyProfile = () => {
   const { data: session } = useSession();
 
+  const [posts, setPosts] = useState([]);
+
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await fetch(`/api/users/$
@@ -18,9 +20,7 @@ const MyProfile = () => {
       setPosts(data);
     };
 
-    console.log(posts);
-
-    fetchPosts();
+    if (session?.user.id) fetchPosts();
   }, []);
 
   const handleEdit = () => {};
