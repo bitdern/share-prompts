@@ -7,8 +7,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className="blue_gradient"> {type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} and share amazing prompts with the world, and let your
-        imagination run wild with any AI-powered platform.
+        {type} and share your prompts with the world; magnify your org's
+        Salesforce productivity by leveraging any AI platform.
       </p>
 
       <form
@@ -31,7 +31,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag{" "}
             <span className="font-normal">
-              (#product, #webdevelopment, #idea, etc.)
+              (#ApexClass, #UseCaseIdea, #LightningWebComponent, #UIUX etc.)
             </span>
           </span>
           <input

@@ -23,13 +23,13 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/images/sf-ai-logo.svg"
           alt="logo"
-          width={30}
-          height={30}
+          width={75}
+          height={75}
           className="object-contain"
         />
-        <p className="logo_text">Salesforce PromptVault</p>
+        <p className="logo_text">Salesforce PromptDepot</p>
       </Link>
 
       {/* Desktop Navigation */}
