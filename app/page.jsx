@@ -6,11 +6,11 @@ const Home = () => {
       <h1 className="head_text text-center">
         Discover & Share
         <br className="max-md:hidden" />
-        <span className="orange_gradient text-center">AI-Powered Prompts</span>
+        <span className="blue_gradient text-center">Salesforce AI Prompts</span>
       </h1>
       <p className="desc text-center">
-        This is an open-source AI prompting tool to help discover, create and
-        share creative prompts
+        This is an open-source, Salesforce-focused AI prompt repo built to help
+        discover, create and share creative Einstein prompts
       </p>
 
       <Feed />

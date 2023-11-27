@@ -6,7 +6,7 @@ import Provider from "@components/Provider";
 import "@styles/globals.css";
 
 export const metadata = {
-  title: "share-prompts",
+  title: "salesforce-ai-prompts",
   description: "Discover & Share AI Prompts",
 };
 
