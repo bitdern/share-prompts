@@ -11,11 +11,19 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const router = useRouter();
 
   const [copied, setCopied] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleCopy = () => {
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(""), 3000);
+  };
+
+  // This may have been a mistake, but I'm not sure how to get the edit button to function properly
+  // The original function lives in app/profile/page.jsx
+  const handlePostEdit = () => {
+    setIsEditing(true);
+    router.push(`/edit/${post._id}`);
   };
 
   return (
@@ -59,14 +67,18 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       >
         #{post.tag}
       </p>
-
+      {/* We will need to figure out how to get this conditional statement to render out a button, my hunch is that it will need to live in a div -- like the copy button does above*/}
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
           <p
             className="font-inter text-sm green_gradient cursror-pointer"
             onClick={handleEdit}
           >
-            Edit
+            {isEditing ? (
+              <button onClick={handlePostEdit}>Save</button>
+            ) : (
+              <button onClick={handlePostEdit}>Edit</button>
+            )}
           </p>
           <p
             className="font-inter text-sm blue_gradient cursror-pointer"
