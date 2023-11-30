@@ -19,7 +19,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     setTimeout(() => setCopied(""), 3000);
   };
 
-  // This may have been a mistake, but I'm not sure how to get the edit button to function properly
+  // I'm not sure how to get the edit button to function properly
   // The original function lives in app/profile/page.jsx
   const handlePostEdit = () => {
     setIsEditing(true);
